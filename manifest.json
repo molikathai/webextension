@@ -27,12 +27,12 @@
 		}]
 	},
 	"background": {
-		"scripts": ["background_scripts/background.js"]
+		"scripts": ["common/scripts/require.js", "background/background.js"]
 	},
 	"content_scripts": [
 	  {
 	    "matches": ["<all_urls>"],
-	    "js": ["common/scripts/extend-dom.js"]
+	    "js": ["common/scripts/cajon.js", "common/scripts/extend-dom.js"]
 	  }
 	],
 	"devtools_page": "devtools/tanaguru-devtools.html",

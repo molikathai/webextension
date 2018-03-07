@@ -6,7 +6,7 @@ function handleMessage(request, sender, sendResponse) {
 		browser.browserAction.enable();
 	}
 	else if (request.command === 'analyze') {
-		return browser.tabs.executeScript(request.tabId, { file: '/common/scripts/analyze.js' });
+		return browser.tabs.executeScript(request.tabId, { file: '/common/scripts/analyze/analyze.js' });
 	}
 	else if (request.command === 'notify') {
 		browser.browserAction.enable();
@@ -26,9 +26,9 @@ function handleMessage(request, sender, sendResponse) {
 			file: '/common/styles/highlight.css'
 		});
 		browser.tabs.executeScript(request.tabId, {
-		    code: 'var element = "' + request.element + '";'
+			code: 'var element = "' + request.element + '";'
 		}, function() {
-		    browser.tabs.executeScript(request.tabId, {file: '/common/scripts/highlight.js'});
+			browser.tabs.executeScript(request.tabId, {file: '/common/scripts/highlight.js'});
 		});
 	}
 }
