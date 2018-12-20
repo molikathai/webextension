@@ -804,6 +804,22 @@ createTanaguruTest({
 		'failed' : "Aucune balise de métadonnée de description n'est renseignée, ou plus d'une balise de métadonnée de description est présente sur la page."
 	},
 	tags: ['a11y', 'SEO']
+createTanaguruTest({
+	lang: 'fr',
+	name: "Présence d'une metadonnée de description.",
+	query: 'head > meta[name="description"]',
+	filter: function(item){
+		if (item.textContent !== ''){
+			return true;
+		}
+
+		return false;
+	},
+	explanations: {
+		'cantTell' : "Vérifier que le contenu de l'élément meta description est une phrase significative et non une liste de mots clefs."
+	},
+	tags: ['SEO'],
+	ressources: { 'opquast-seo':['48'] }
 })
 
 createTanaguruTest({
