@@ -21,6 +21,10 @@
  * 
  * SEO
  * 
+ * OPQUAST (règles spécifiques)
+ * 
+ * PIDILA (règles spécifiques)
+ * 
  * 00 - Chargement des résultats
 */
 
@@ -356,8 +360,8 @@ createTanaguruTest({
 		'failed': "Des liens images sans intitulé sont présents dans la page."
 	},
 	mark: '(alt=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'images', 'links'],
-	ressources: { 'rgaa': ['6.5.1'] }
+	tags: ['a11y', 'images', 'links', 'pidila', 'q5y'],
+	ressources: { 'rgaa': ['6.5.1'], 'pidila': ['Pi-322'], 'opquast': ['107'] }
 });
 
 // ------------------------------------------------
@@ -380,8 +384,8 @@ createTanaguruTest({
 	name: 'Boutons images avec attribut alt.',
 	query: 'input[alt][type=image]:not([role])',
 	mark: '(alt=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'images', 'buttons'],
-	ressources: { 'rgaa': ['1.3.3'] }
+	tags: ['a11y', 'images', 'buttons', 'pidila'],
+	ressources: { 'rgaa': ['1.3.3'], 'pidila': ['Pi-304'] }
 });
 
 createTanaguruTest({
@@ -394,8 +398,8 @@ createTanaguruTest({
 		'failed': "Des éléments input type='image' sans attribut alt sont présents dans la page."
 	},
 	mark: '(alt=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'images', 'buttons'],
-	ressources: { 'rgaa': ['1.1.3'] }
+	tags: ['a11y', 'images', 'buttons', 'pidila'],
+	ressources: { 'rgaa': ['1.1.3'], 'pidila': ['Pi-302'] }
 });
 
 createTanaguruTest({
@@ -411,8 +415,8 @@ createTanaguruTest({
 		'failed': "Des éléments input type='image' sans attribut alt sont présents dans la page."
 	},
 	mark: '(alt=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'images', 'buttons'],
-	ressources: { 'rgaa': ['1.3.3'] }
+	tags: ['a11y', 'images', 'buttons', 'pidila'],
+	ressources: { 'rgaa': ['1.3.3'], 'pidila': ['Pi-304'] }
 });
 
 
@@ -441,8 +445,8 @@ createTanaguruTest({
 		'failed': "Des éléments boutons images ont un attribut title, aria-label ou aria-labelledby différent de l'attibut alt."
 	},
 	mark: '(alt=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'images', 'buttons'],
-	ressources: { 'rgaa': ['1.3.3'] }
+	tags: ['a11y', 'images', 'buttons', 'pidila'],
+	ressources: { 'rgaa': ['1.3.3'], 'pidila': ['Pi-304'] }
 });
 
 // ------------------------------------------------
@@ -471,8 +475,8 @@ explanations: {
 	'failed': "Des éléments de formulaire natifs n'ont pas d'étiquette."
 },
 mark: '(\sid=&quot;(?:(?!&quot;).)*&quot;)',
-tags: ['a11y', 'forms', 'labels'],
-ressources: { 'rgaa': ['11.1.1'] }
+tags: ['a11y', 'forms', 'labels', 'pidila', 'q5y'],
+ressources: { 'rgaa': ['11.1.1'], 'pidila': ['Pi-313'], 'opquast': ['85'] }
 });
 
 createTanaguruTest({
@@ -506,8 +510,8 @@ createTanaguruTest({
 		'failed': "Des éléments champs de formulaire implémentés via aria n'ont pas d'étiquette."
 	},
 	mark: '(\sid=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'forms', 'labels', 'aria'],
-	ressources: { 'rgaa': ['7.1.1'] }
+	tags: ['a11y', 'forms', 'labels', 'aria', 'pidila'],
+	ressources: { 'rgaa': ['7.1.1'], 'pidila': ['Pi-348'] }
 	});
 
 // ------------------------------------------------
@@ -530,8 +534,8 @@ createTanaguruTest({
 		'failed': "Des composants d’interface implémentés via un rôle ARIA sont accessibles au clavier (via l'attribut tabindex)."
 	},
 	mark: '(tabindex=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'forms', 'labels','aria'],
-	ressources: { 'rgaa': ['7.3.1'] }
+	tags: ['a11y', 'forms', 'labels', 'aria', 'pidila'],
+	ressources: { 'rgaa': ['7.3.1'], 'pidila': ['Pi-327'] }
 	});
 
 // ------------------------------------------------
@@ -549,8 +553,8 @@ createTanaguruTest({
 		'passed': "Cette page ne contient pas d'éléments obsolètes.",
 		'failed': "Des balises obsolètes sont présentes dans la page."
 	},
-	tags: ['a11y', 'Deprecated'],
-	ressources: { 'rgaa': ['8.2.2'] }
+	tags: ['a11y', 'Deprecated', 'pidila'],
+	ressources: { 'rgaa': ['8.2.2'], 'pidila': ['Pi-360'] }
 	});
 
 	createTanaguruTest({
@@ -645,8 +649,8 @@ filter: function(item) {
 		'failed': "Des éléments champs de formulaire de type hidden sont associées à une balise label."
 	},
 	mark: '(for=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'Mandatory', ],
-	ressources: { 'rgaa': ['8.2.1'] }
+	tags: ['a11y', 'Mandatory', 'pidila'],
+	ressources: { 'rgaa': ['8.2.1'], 'pidila': ['Pi-360'] }
 });
 
 createTanaguruTest({
@@ -662,8 +666,8 @@ filter: function(item) {
 		'failed': "Des attributs aria-labelledby ne correspondent à aucun élément de la page."
 	},
 	mark: '(for=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'Mandatory', ],
-	ressources: { 'rgaa': ['8.2.1'] }
+	tags: ['a11y', 'Mandatory', 'pidila'],
+	ressources: { 'rgaa': ['8.2.1'], 'pidila': ['Pi-360'] }
 });
 
 // Sens de lecture
@@ -675,8 +679,8 @@ createTanaguruTest({
 	explanations: {
 		'cantTell': "Vérifier la pertinence des attributs indiquant le sens de lecture."
 	},
-	tags: ['a11y', 'Mandatory'],
-	ressources: { 'rgaa': ['8.10.2'] }
+	tags: ['a11y', 'Mandatory', 'pidila'],
+	ressources: { 'rgaa': ['8.10.2'], 'pidila': ['Pi-359'] }
 });
 
 createTanaguruTest({
@@ -697,8 +701,8 @@ createTanaguruTest({
 		'passed' : "Les valeurs des attributs 'dir' sont conformes ('rtl' ou 'ltr').",
 		'failed': "Les valeurs des attributs 'dir' ne sont pas conformes."
 	},
-	tags: ['a11y', 'Mandatory'],
-	ressources: { 'rgaa': ['8.10.2'] }
+	tags: ['a11y', 'Mandatory', 'pidila'],
+	ressources: { 'rgaa': ['8.10.2'], 'pidila': ['Pi-359'] }
 })
 
 // ------------------------------------------------
@@ -712,8 +716,8 @@ createTanaguruTest({
 	explanations: {
 		'cantTell' : "Vérifier la pertinence de ces balises. La balise <header> correspond-elle à la zone d'en-tête de la page ? La et les balise(s) <nav> correspondent-elles aux zones de navigation ? La balise <footer> correspond-elle à la zone de pied de page de la page ? La balise <main> correspond-elle à la zone de contenu principal de la page ?"
 	},
-	tags: ['a11y', 'Structure'],
-	ressources: { 'rgaa': ['9.2.1'] }
+	tags: ['a11y', 'Structure', 'pidila'],
+	ressources: { 'rgaa': ['9.2.1'], 'pidila': ['Pi-363'] }
 })
 
 createTanaguruTest({
@@ -725,8 +729,8 @@ createTanaguruTest({
 		'passed' : "La zone de contenu principal est unique.",
 		'failed' : "Il existe plusieurs zones identifiées comme zones de contenu principal sur cette page."
 	},
-	tags: ['a11y', 'Structure'],
-	ressources: { 'rgaa': ['9.2.1', '12.10.1'] }
+	tags: ['a11y', 'Structure', 'pidila'],
+	ressources: { 'rgaa': ['9.2.1', '12.10.1'], 'pidila': ['Pi-363'] }
 })
 
 createTanaguruTest({
@@ -736,8 +740,8 @@ createTanaguruTest({
 	explanations: {
 		'cantTell' : "Vérifier que les balises 'q' sont utilisées pour des citations courtes et que les balises 'blockquote' sont utilisées pour des blocs de citation."
 	},
-	tags: ['a11y', 'Structure'],
-	ressources: { 'rgaa': ['9.6.1', '9.6.2'] }
+	tags: ['a11y', 'Structure', 'pidila'],
+	ressources: { 'rgaa': ['9.6.1', '9.6.2'], 'pidila': ['Pi-366'] }
 })
 
 // ------------------------------------------------
@@ -753,8 +757,8 @@ createTanaguruTest({
 		'passed' : "Cette page ne contient aucune balise de présentation de l'information dans son code source.",
 		'failed' : "Des balises de présentation de l'information sont présentes sur cette page."
 	},
-	tags: ['a11y', 'Presentation'],
-	ressources: { 'rgaa': ['10.1.1'] }
+	tags: ['a11y', 'Presentation', 'pidila', 'q5y'],
+	ressources: { 'rgaa': ['10.1.1'], 'pidila': ['Pi-342'], 'opquast': ['24'] }
 })
 
 createTanaguruTest({
@@ -786,8 +790,8 @@ createTanaguruTest({
 		'passed' : "Cette page ne contient aucun attribut de présentation de l'information dans son code source.",
 		'failed' : "Des attributs de présentation de l'information sont présents sur cette page."
 	},
-	tags: ['a11y', 'Presentation'],
-	ressources: { 'rgaa': ['10.1.2'] }
+	tags: ['a11y', 'Presentation', 'pidila', 'q5y'],
+	ressources: { 'rgaa': ['10.1.2'], 'pidila': ['Pi-342'], 'opquast': ['24'] }
 })
 
 /*************************************************
@@ -887,7 +891,10 @@ createTanaguruTest({
 		'passed' : "Le titre de la page contient moins de 80 caractères.",
 		'failed' : "Le titre de la page contient plus de 80 caractères."
 	},
-	tags: ['a11y', 'SEO']
+	tags: ['SEO', 'pidila'],
+	ressources: { 'pidila':['Pi-412'], 'opquast-seo':['46'] }
+})
+
 /*************************************************
  ***** Opquast ***********************************
  *************************************************/
