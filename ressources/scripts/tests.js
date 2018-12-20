@@ -803,7 +803,9 @@ createTanaguruTest({
 		'passed' : "Cette page contient une balise de métadonnée de description.",
 		'failed' : "Aucune balise de métadonnée de description n'est renseignée, ou plus d'une balise de métadonnée de description est présente sur la page."
 	},
-	tags: ['a11y', 'SEO']
+	tags: ['SEO']
+})
+
 createTanaguruTest({
 	lang: 'fr',
 	name: "Présence d'une metadonnée de description.",
@@ -838,7 +840,8 @@ createTanaguruTest({
 		'passed' : "La valeur de la métadonnée de description contient moins de 250 caractères.",
 		'failed' : "La valeur de la métadonnée de description contient plus de 250 caractères."
 	},
-	tags: ['a11y', 'SEO']
+	tags: ['SEO'],
+	ressources: { 'opquast-seo':['49'] }
 })
 
 createTanaguruTest({
@@ -861,7 +864,9 @@ createTanaguruTest({
 		'passed' : "Tous les éléments de styles CSS sont externalisés.",
 		'failed' : "Au moins une balise de style ou un attribut de style non vide est présent dans la page."
 	},
-	tags: ['a11y', 'SEO']
+	mark: '(style=&quot;(?:(?!&quot;).)*&quot;)',
+	tags: ['SEO'],
+	ressources: { 'opquast-seo':['74'] }
 })
 
 createTanaguruTest({
