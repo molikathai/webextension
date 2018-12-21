@@ -895,7 +895,29 @@ createTanaguruTest({
 	ressources: { 'pidila':['Pi-412'], 'opquast-seo':['46'] }
 })
 
+createTanaguruTest({
+	lang: 'fr',
+	name: "Les images sont indexables par les principaux moteurs de recherche.",
+	query: 'img[src]',
+	expectedNbElements: 0,
+	filter: function(item){
+		var imgFormat = item.getAttribute('src').split('.').pop().toLowerCase();
+		var ext = ['jpg', 'jpeg', 'gif', 'png', 'svg'];
+
+		if (ext.indexOf(imgFormat) == -1) {
+			return true;
+		}
+
+		return false;
 	},
+	explanations: {
+		'passed' : "Tous les formats d'images sont indexables par les principaux moteurs de recherche (svg, png, jpeg, gif).",
+		'failed' : "Certaines images ne sont pas dans un format indexable par les principaux moteurs de recherche. Remplacer ces images par des images au format SVG, JPEG, GIF ou PNG."
+	},
+	tags: ['SEO'],
+	ressources: { 'opquast-seo':['20'] }
+})
+
 /*************************************************
  ***** Opquast ***********************************
  *************************************************/
