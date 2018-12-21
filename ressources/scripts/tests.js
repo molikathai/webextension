@@ -46,8 +46,8 @@ createTanaguruTest({
 		'failed': "Des éléments iframe sans attribut title sont présents dans cette page."
 	},
 	mark: '(title=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'frames'],
-	ressources: { 'rgaa': ['2.1.1'] }
+	tags: ['a11y', 'frames', 'q5y', 'pidila'],
+	ressources: { 'rgaa': ['2.1.1'], 'opquast': ['145'], 'pidila': ['Pi-357'] }
 });
 
 createTanaguruTest({
@@ -69,8 +69,8 @@ createTanaguruTest({
 		'cantTell': "Vérifiez que les titres des cadres en présence sont pertinents."
 	},
 	mark: '(title=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'frames'],
-	ressources: { 'rgaa': ['2.1.1'] }
+	tags: ['a11y', 'frames', 'q5y', 'pidila'],
+	ressources: { 'rgaa': ['2.1.1'], 'opquast': ['145'], 'pidila': ['Pi-357'] }
 });
 
 createTanaguruTest({
@@ -92,8 +92,8 @@ createTanaguruTest({
 		'failed': "Des éléments iframe avec attribut title non pertinent sont présents dans cette page."
 	},
 	mark: '(title=&quot;(?:(?!&quot;).)*&quot;)',
-	tags: ['a11y', 'frames'],
-	ressources: { 'rgaa': ['2.2.1'] }
+	tags: ['a11y', 'frames', 'q5y', 'pidila'],
+	ressources: { 'rgaa': ['2.2.1'], 'opquast': ['145'], 'pidila': ['Pi-357'] }
 });
 
 // ------------------------------------------------
@@ -109,8 +109,8 @@ createTanaguruTest({
 		'passed': "Un titre de niveau 1 (élément h1) est présent dans la page.", 
 		'failed': "Cette page ne contient pas de titre de niveau 1 (élément h1)."
 	},
-	tags: ['a11y', 'headings', 'SEO'],
-	ressources: { 'rgaa': ['9.1.1'] }
+	tags: ['a11y', 'headings', 'SEO', 'pidila', 'q5y'],
+	ressources: { 'rgaa': ['9.1.1'], 'opquast': ['13'], 'pidila': ['Pi-362'], 'opquast-seo': ['10'] }
 });
 
 createTanaguruTest({
@@ -120,8 +120,8 @@ createTanaguruTest({
 	explanations: {
 		'cantTell': "Vérifiez que les titres de contenus en présence sont pertinents."
 	},
-	tags: ['a11y', 'headings', 'SEO'],
-	ressources: { 'rgaa': ['9.1.4'] }
+	tags: ['a11y', 'headings', 'SEO', 'pidila', 'q5y'],
+	ressources: { 'rgaa': ['9.1.4'], 'pidila': ['Pi-362'], 'opquast': ['13'] }
 });
 
 
